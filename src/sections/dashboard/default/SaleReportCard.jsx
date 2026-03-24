@@ -34,7 +34,7 @@ export default function SaleReportCard() {
     <>
       <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
         <Grid>
-          <Typography variant="h5">Sales Report</Typography>
+          <Typography variant="h5"> Report</Typography>
         </Grid>
         <Grid>
           <TextField

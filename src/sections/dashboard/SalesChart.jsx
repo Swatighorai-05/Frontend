@@ -75,7 +75,7 @@ export default function SalesChart() {
         <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
           <Box>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-              Net Profit
+              Frolic
             </Typography>
             <Typography variant="h4">$1560</Typography>
           </Box>

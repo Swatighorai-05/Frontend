@@ -17,21 +17,25 @@ import { NumericFormat } from 'react-number-format';
 // project imports
 import Dot from 'components/@extended/Dot';
 
-function createData(tracking_no, name, fat, carbs, protein) {
-  return { tracking_no, name, fat, carbs, protein };
+// function createData(tracking_no, name, fat, carbs, protein) {
+//   return { tracking_no, name, fat, carbs, protein };
+// }
+
+function createData(Id, Name, Totalparticipation,Status) {
+  return { Id, Name, Totalparticipation,Status };
 }
 
 const rows = [
-  createData(84564564, 'Camera Lens', 40, 2, 40570),
-  createData(98764564, 'Laptop', 300, 0, 180139),
-  createData(98756325, 'Mobile', 355, 1, 90989),
-  createData(98652366, 'Handset', 50, 1, 10239),
-  createData(13286564, 'Computer Accessories', 100, 1, 83348),
-  createData(86739658, 'TV', 99, 0, 410780),
-  createData(13256498, 'Keyboard', 125, 2, 70999),
-  createData(98753263, 'Mouse', 89, 2, 10570),
-  createData(98753275, 'Desktop', 185, 1, 98063),
-  createData(98753291, 'Chair', 100, 0, 14001)
+  createData(84564564, 'Hardvi', 40, 2),
+  createData(98764564, 'Naimisha', 300, 0),
+  createData(98756325, 'Riddhi', 355, 1),
+  createData(98652366, 'Khushi', 50, 1),
+  createData(13286564, 'Vanshi', 100, 1),
+  createData(86739658, 'Reshma', 99, 0),
+  createData(13256498, 'Swati', 125, 2),
+  createData(98753263, 'Sounak', 89, 2),
+  createData(98753275, 'riya', 185, 1),
+  createData(98753291, 'Hirvita', 100, 0)
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -62,36 +66,36 @@ function stableSort(array, comparator) {
 
 const headCells = [
   {
-    id: 'tracking_no',
+    id: 'Id',
     align: 'left',
     disablePadding: false,
-    label: 'Tracking No.'
+    label: 'Id'
   },
   {
-    id: 'name',
+    id: 'Name',
     align: 'left',
     disablePadding: true,
-    label: 'Product Name'
+    label: 'Name'
   },
   {
-    id: 'fat',
-    align: 'right',
+    id: 'Totalparticipation',
+    align: 'center',
     disablePadding: false,
-    label: 'Total Order'
+    label: 'Totalparticipate'
   },
   {
-    id: 'carbs',
+    id: 'Status',
     align: 'left',
     disablePadding: false,
 
     label: 'Status'
-  },
-  {
-    id: 'protein',
-    align: 'right',
-    disablePadding: false,
-    label: 'Total Amount'
   }
+  // {
+  //   id: 'protein',
+  //   align: 'right',
+  //   disablePadding: false,
+  //   label: 'Total Amount'
+  // }
 ];
 
 // ==============================|| ORDER TABLE - HEADER ||============================== //
@@ -149,7 +153,7 @@ function OrderStatus({ status }) {
 
 export default function OrderTable() {
   const order = 'asc';
-  const orderBy = 'tracking_no';
+  const orderBy = 'Id';
 
   return (
     <Box>
@@ -175,19 +179,19 @@ export default function OrderTable() {
                   role="checkbox"
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   tabIndex={-1}
-                  key={row.tracking_no}
+                  key={row.Id}
                 >
                   <TableCell component="th" id={labelId} scope="row">
-                    <Link color="secondary">{row.tracking_no}</Link>
+                    <Link color="secondary">{row.Id}</Link>
                   </TableCell>
-                  <TableCell>{row.name}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
+                  <TableCell>{row.Name}</TableCell>
+                  <TableCell align="center">{row.Totalparticipation}</TableCell>
                   <TableCell>
-                    <OrderStatus status={row.carbs} />
+                    <OrderStatus status={row.status} />
                   </TableCell>
-                  <TableCell align="right">
+                  {/* <TableCell align="right">
                     <NumericFormat value={row.protein} displayType="text" thousandSeparator prefix="$" />
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               );
             })}

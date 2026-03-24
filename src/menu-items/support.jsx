@@ -29,6 +29,34 @@ const support = {
       icon: icons.QuestionOutlined,
       external: true,
       target: true
+    },
+     {
+      id: 'Student-List',
+      title: 'student-list',
+      type: 'item',
+      url: '/student-list',
+     icon: icons.QuestionOutlined //any icons we can give
+    },
+     {
+      id: 'Institute-List',
+      title: 'institute-List',
+      type: 'item',
+      url: '/institute-List',
+     icon: icons.QuestionOutlined //any icons we can give
+    },
+     {
+      id: 'Department-List',
+      title: 'department-List',
+      type: 'item',
+      url: '/department-List',
+     icon: icons.QuestionOutlined //any icons we can give
+    },
+     {
+      id: 'Event-List',
+      title: 'event-List',
+      type: 'item',
+      url: '/event-List',
+     icon: icons.ChromeOutlined //any icons we can give
     }
   ]
 };
